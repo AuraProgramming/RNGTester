@@ -3,5 +3,7 @@
 
 # Features:
 -Show time spent until rare drop
+
 -Show tries used until rare drop
+
 -Hold any button to speed up
