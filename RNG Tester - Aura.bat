@@ -12,12 +12,12 @@ MODE con: lines=3
 	
 :askmoney
 	cls
-	set /p money=How much money will you get each drop?
+	set /p money=How much money will you get each drop? Enter Number:
 	goto asklog
 	
 :asklog
 	cls
-	set /p trytf=Would you like to log tries and time? (Y/N):
+	set /p trytf=Would you like to log tries and time? Y/N:
 	if "%trytf%"=="Y" goto autologsetup
 	if "%trytf%"=="N" goto autosetup
 
