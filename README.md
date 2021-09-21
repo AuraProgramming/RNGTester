@@ -13,3 +13,5 @@
 -Show money per minute
 
 -Hold any button to speed up
+
+-Rare Drops counter
