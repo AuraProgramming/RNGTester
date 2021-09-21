@@ -23,7 +23,7 @@ MODE con: lines=3
 
 :autologsetup
 	cls
-	set /p time=Time in between (Min.1):
+	set /p time=Time in between (Min.1): 
 	goto autolog
 	
 :autolog
