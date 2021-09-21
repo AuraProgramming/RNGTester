@@ -8,4 +8,8 @@
 
 -Show tries used until rare drop
 
+-Show possible money earned
+
+-Show money per minute
+
 -Hold any button to speed up
