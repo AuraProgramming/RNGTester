@@ -45,10 +45,14 @@ MODE con: lines=3
 	cls
 	set /a num=%random% %%%chance%
 	echo Number Rolled: %num% Money Gained: %moneygain%
-	if "%num%"=="1" goto claim
+	if "%num%"=="1" goto claim2
 	timeout /t %time% >nul
 	goto auto
 	
 :claim
 	set /a moneygain=%moneygain%+%money%
-	exit
+	goto autolog
+	
+:claim2
+	set /a moneygain=%moneygain%+%money%
+	goto auto
