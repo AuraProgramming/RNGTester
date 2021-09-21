@@ -31,7 +31,7 @@ MODE con: lines=3
 	set /a num=%random% %%%chance%
 	set /a tries=%tries%+1
 	set /a timespent=%tries%*%time%
-	set /a moneymincalc=%timespent%/60
+	if "%timespent%">"59" do set /a moneymincalc=%timespent%/60
 	set /a moneyminute=%money%/%moneymincalc%
 	echo Number Rolled: %num% | Try #%tries% | Time Spent: %timespent% seconds | Money Gained: %moneygain% | Money/Minute: %moneyminute%
 	if "%num%"=="1" goto claim
