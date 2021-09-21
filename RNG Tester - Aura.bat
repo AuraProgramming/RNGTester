@@ -33,7 +33,7 @@ MODE con: lines=3
 	set /a timespent=%tries%*%time%
 	set /a moneycalc=%money%/%timespent%
 	set /a moneyminute=%moneycalc%*60
-	echo Number Rolled: %num% | Try #%tries% | Time Spent: %timespent% seconds | Money Gained: %moneygain% | Estimated Money/Minute: %moneyminute%
+	echo Number Rolled: %num% / Try #%tries% / Time Spent: %timespent% seconds / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
 	if "%num%"=="1" goto claim
 	timeout /t %time% >nul
 	goto autolog
@@ -50,7 +50,7 @@ MODE con: lines=3
 	set /a timespent=%tries%*%time%
 	set /a moneycalc=%money%/%timespent%
 	set /a moneyminute=%moneycalc%*60
-	echo Number Rolled: %num% | Money Gained: %moneygain% | Estimated Money/Minute: %moneyminute%
+	echo Number Rolled: %num% / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
 	if "%num%"=="1" goto claim2
 	timeout /t %time% >nul
 	goto auto
