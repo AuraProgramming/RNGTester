@@ -3,6 +3,7 @@ title RNG Tester
 set /a tries=0
 set /a moneygain=0
 set /a moneyminute=0
+set /a raredrops=0
 MODE con: lines=3
 
 :askchance
@@ -34,7 +35,7 @@ MODE con: lines=3
 	set /a timespent=%tries% * %time%
 	set /a moneycalc=%moneygain% / %timespent%
 	set /a moneyminute=%moneycalc% * 60
-	echo Number Rolled: %num% / Try #%tries% / Time Spent: %timespent% seconds / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
+	echo Number Rolled: %num% / Try #%tries% / Time Spent: %timespent% seconds / Rare Drops: %raredrops% / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
 	if "%num%"=="1" goto claim
 	timeout /t %time% >nul
 	goto autolog
@@ -51,15 +52,17 @@ MODE con: lines=3
 	set /a timespent=%tries% * %time%
 	set /a moneycalc=%moneygain% / %timespent%
 	set /a moneyminute=%moneycalc% * 60
-	echo Number Rolled: %num% / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
+	echo Number Rolled: %num% / Rare Drops: %raredrops% / Money Gained: %moneygain% / Estimated Money per Minute: %moneyminute%
 	if "%num%"=="1" goto claim2
 	timeout /t %time% >nul
 	goto auto
 	
 :claim
+	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
 	goto autolog
 	
 :claim2
+	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
 	goto auto
