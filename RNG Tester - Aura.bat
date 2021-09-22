@@ -25,17 +25,15 @@ MODE con: lines=3
 	set /p name=What is the name of the rare drop (No spaces): 
 	goto askshow
 	
+:asklog
+	cls
+	set /p data=Would you like your drop data to be logged? Y/N: 
+	
 :askshow
 	cls
 	set /p trytf=Would you like to show tries and time? Y/N: 
 	if "%trytf%"=="Y" goto autotrysetup
 	if "%trytf%"=="N" goto autosetup
-
-:asklog
-	cls
-	set /p data=Would you like your drop data to be logged? Y/N: 
-	if "%datatf%"=="Y" goto checktrylog
-	if "%datatf%"=="N" goto checktry
 
 :autotrysetup
 	cls
