@@ -7,6 +7,7 @@ set /a tries=0
 set /a moneygain=0
 set /a moneyminute=0
 set /a raredrops=0
+set /a name=unknown
 MODE con: lines=3
 
 :askchance
