@@ -1,4 +1,7 @@
 @echo off
+md %USERPROFILE%\.rngtester
+md %USERPROFILE%\.rngtester\data
+md %USERPROFILE%\.rngtester\dropdata
 title RNG Tester
 set /a tries=0
 set /a moneygain=0
@@ -71,11 +74,11 @@ MODE con: lines=3
 :claim
 	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
-	if "%logtf%"=="Y" echo Timespent: %timespent% seconds Tries: %tries% Estimated Money per Minute: %moneyminute%>>%name%.txt
+	if "%logtf%"=="Y" echo Timespent: %timespent% seconds Tries: %tries% Estimated Money per Minute: %moneyminute%>>%userprofile%\dropdata\%name%.txt
 	goto autotry
 	
 :claim2
 	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
-	if "%logtf%"=="Y" echo Timespent: %timespent% seconds Tries: %tries% Estimated Money per Minute: %moneyminute%>>%name%.txt
+	if "%logtf%"=="Y" echo Timespent: %timespent% seconds Tries: %tries% Estimated Money per Minute: %moneyminute%>>%userprofile%\dropdata\%name%.txt
 	goto auto
