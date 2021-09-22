@@ -13,7 +13,6 @@ MODE con: lines=3
 :askchance
 	cls
 	set /p chance=Chances of getting number: 1/
-	set /a chance="%chance%"+1
 	goto askmoney
 	
 :askmoney
