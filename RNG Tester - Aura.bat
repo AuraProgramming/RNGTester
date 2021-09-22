@@ -23,7 +23,7 @@ MODE con: lines=3
 :askname
 	cls
 	set /p name=What is the name of the rare drop (No spaces): 
-	goto askslog
+	goto asklog
 	
 :asklog
 	cls
