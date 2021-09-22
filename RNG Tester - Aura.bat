@@ -23,11 +23,12 @@ MODE con: lines=3
 :askname
 	cls
 	set /p name=What is the name of the rare drop (No spaces): 
-	goto askshow
+	goto askslog
 	
 :asklog
 	cls
 	set /p data=Would you like your drop data to be logged? Y/N: 
+	goto askshow
 	
 :askshow
 	cls
