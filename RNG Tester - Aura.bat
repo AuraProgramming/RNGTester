@@ -74,11 +74,11 @@ MODE con: lines=3
 :claim
 	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
-	if "%logtf%"=="Y" echo Estimated Money per Minute: %moneyminute%>>"%userprofile%\.rngtester\dropdata\%name%.txt"
+	if "%data%"=="Y" echo Estimated Money per Minute: %moneyminute%>>"%userprofile%\.rngtester\dropdata\%name%.txt"
 	goto autotry
 	
 :claim2
 	set /a raredrops=%raredrops% + 1
 	set /a moneygain=%moneygain%+%money%
-	if "%logtf%"=="Y" echo Estimated Money per Minute: %moneyminute%>>"%userprofile%\.rngtester\dropdata\%name%.txt"
+	if "%data%"=="Y" echo Estimated Money per Minute: %moneyminute%>>"%userprofile%\.rngtester\dropdata\%name%.txt"
 	goto auto
