@@ -19,7 +19,7 @@ MODE con: lines=3
 	
 :asklog
 	cls
-	set /p trytf=Would you like to log tries and time? Y/N: 
+	set /p trytf=Would you like to show tries and time? Y/N: 
 	if "%trytf%"=="Y" goto autologsetup
 	if "%trytf%"=="N" goto autosetup
 
